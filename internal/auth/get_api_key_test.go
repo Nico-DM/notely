@@ -47,12 +47,12 @@ func TestGetAPIKey(t *testing.T) {
 				if test.expectErr != nil && strings.Contains(err.Error(), test.expectErr.Error()) {
 					return
 				}
-				t.Errorf("Unexpected: TestGetAPIKey:%v\n", err)
+				t.Errorf("Unexpected: TestGetAPIKey: %v\n", err)
 				return
 			}
 
 			if output != test.expect {
-				t.Errorf("Unexpected: TestGetAPIKey:%s", output)
+				t.Errorf("Unexpected: TestGetAPIKey: %s", output)
 				return
 			}
 		})
